@@ -1,0 +1,108 @@
+<div class="col-md-6">
+<h4>Employee Details:</h4>
+<p id="notice"><%= notice %></p>
+<table class="table">
+<tr>
+  <td>
+    <strong>Id:</strong>
+  </td>
+  <td>
+  <%= @employee.id %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>First Name:</strong>
+  </td>
+  <td>
+  <%= @employee.firstname %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>Last name:</strong>
+  </td>
+  <td>
+  <%= @employee.lastname %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>Email:</strong>
+  </td>
+  <td>
+  <%= @employee.email %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>Phone:</strong>
+  </td>
+  <td>
+  <%= @employee.phone %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>DOB:</strong>
+  </td>
+  <td>
+  <%= @employee.dob %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>DOJ:</strong>
+  </td>
+  <td>
+  <%= @employee.doj %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>Designation:</strong>
+  </td>
+  <td>
+  <%= @employee.designation %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+  <strong>Department:</strong>
+  </td>
+  <td>
+  <%= @employee.department %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>Residential Address:</strong>
+  </td>
+  <td>
+  <%= @employee.residential_address %>
+  </td>
+</tr>
+<tr>
+  <td>
+  <strong>Permanent Address:</strong>
+  </td>
+  <td>
+  <%= @employee.permanent_address %>
+  </td>
+</tr>
+
+
+
+</tbody>
+</table>
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
+</div>
+
+
+
+
+

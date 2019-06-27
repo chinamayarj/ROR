@@ -1,0 +1,92 @@
+<style>
+select{display: block;
+width: 30%;
+float: left;
+margin: 0px 19px 0 0px;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-group label {
+  display: block !important;
+}
+</style>
+<div class="row" style="margin:auto">
+<div class="col-md-6">
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+  <div class="form-group">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :dob %>
+    <%= form.date_select :dob ,:class => "form-control"%>
+  </div>
+  <div style="clear:both"></div>
+  <div class="form-group">
+    <%= form.label :doj %>
+    <%= form.date_select :doj ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :designation %>
+    <%= form.text_field :designation ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :department %>
+    <%= form.text_field :department ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :residential_address %>
+    <%= form.text_area :residential_address ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :permanent_address %>
+    <%= form.text_area :permanent_address ,:class => "form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-primary'%>
+  </div>
+<% end %>
+</div>
+</div>
